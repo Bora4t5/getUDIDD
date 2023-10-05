@@ -50,7 +50,7 @@ openssl smime -sign -signer <your ssl certificate file> -inkey <your private key
 application/x-apple-aspen-config
 ```
 
-# VERIFIY KEYS (OPTIONAL)
+# VERIFY KEYS (OPTIONAL)
 ```
 openssl x509 -noout -modulus -in server.crt | openssl md5
 openssl rsa -noout -modulus -in server.key | openssl md5
