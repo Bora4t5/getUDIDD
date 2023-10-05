@@ -40,13 +40,14 @@
 
 
 # SIGN THE .MOBILECONFIG FILE
-
-```openssl smime -sign -signer <your ssl certificate file> -inkey <your private key file> -certfile <additional certificates if your issuer provides them> -nodetach -outform der -in <the basic .mobileconfig to sign> -out <the output file to save it as>
+```
+openssl smime -sign -signer <your ssl certificate file> -inkey <your private key file> -certfile <additional certificates if your issuer provides them> -nodetach -outform der -in <the basic .mobileconfig to sign> -out <the output file to save it as>
 ```
 
 # DELIVER THE .MOBILECONFIG FILE
 ### Content-Type Header
-```application/x-apple-aspen-config
+```
+application/x-apple-aspen-config
 ```
 
 # VERIFIY KEYS (OPTIONAL)
