@@ -1,4 +1,4 @@
-# CREATE THE .MOBILECONFIG FILE
+# Create the .mobileconfig file
 
 
 ```<?xml version="1.0" encoding="UTF-8"?>
@@ -39,18 +39,18 @@
 
 
 
-# SIGN THE .MOBILECONFIG FILE
+# sign the .mobileconfig file
 ```
 openssl smime -sign -signer <your ssl certificate file> -inkey <your private key file> -certfile <additional certificates if your issuer provides them> -nodetach -outform der -in <the basic .mobileconfig to sign> -out <the output file to save it as>
 ```
 
-# DELIVER THE .MOBILECONFIG FILE
-### Content-Type Header
+# deliver the .mobileconfig file
+### SET Content-Type Header
 ```
 application/x-apple-aspen-config
 ```
 
-# VERIFY KEYS (OPTIONAL)
+# Verify Keys (optional)
 ```
 openssl x509 -noout -modulus -in server.crt | openssl md5
 openssl rsa -noout -modulus -in server.key | openssl md5
