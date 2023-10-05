@@ -1,3 +1,6 @@
+# How to get iOS UDID without a Mac or PC? 
+This project shows how to do it using a mobileconfig file and hosting it on a Apache server.
+
 # Create the .mobileconfig file
 
 
